@@ -272,13 +272,11 @@ void cycle_for_con(vector <double>& all_numbers, istream& in)
     while (ok)
     {
         string str;
-        in >> str;
+        getline(in, str);
         if (str == "N") 
             ok = false;
-        else if (str.length()>=1)
+        else 
             cycle_for(str, all_numbers);
-        else
-            throw runtime_error("Error! Wrong input, try again!");
     }
 }
 
